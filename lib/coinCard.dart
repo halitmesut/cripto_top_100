@@ -107,7 +107,7 @@ class CoinCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
-                    price.toDouble().toStringAsFixed(3),
+                    price.toDouble().toString(),
                     style: TextStyle(
                       color: Colors.grey[900],
                       fontSize: 20,

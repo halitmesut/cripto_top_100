@@ -62,31 +62,32 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
+      appBar: AppBar(
         backgroundColor: Colors.grey[300],
-        appBar: AppBar(
-          backgroundColor: Colors.grey[300],
-          title: Text(
-            'CRYPTO TOP 100',
-            style: TextStyle(
-              color: Colors.grey[900],
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
+        title: Text(
+          'CRYPTO TOP 100',
+          style: TextStyle(
+            color: Colors.grey[900],
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
           ),
         ),
-        body: ListView.builder(
-          scrollDirection: Axis.vertical,
-          itemCount: coinList.length,
-          itemBuilder: (context, index) {
-            return CoinCard(
-              name: coinList[index].name,
-              symbol: coinList[index].symbol,
-              imageUrl: coinList[index].imageUrl,
-              price: coinList[index].price.toDouble(),
-              change: coinList[index].change.toDouble(),
-              changePercentage: coinList[index].changePercentage.toDouble(),
-            );
-          },
-        ));
+      ),
+      body: ListView.builder(
+        scrollDirection: Axis.vertical,
+        itemCount: coinList.length,
+        itemBuilder: (context, index) {
+          return CoinCard(
+            name: coinList[index].name,
+            symbol: coinList[index].symbol,
+            imageUrl: coinList[index].imageUrl,
+            price: coinList[index].price.toDouble(),
+            change: coinList[index].change.toDouble(),
+            changePercentage: coinList[index].changePercentage.toDouble(),
+          );
+        },
+      ),
+    );
   }
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+List<Coin> coinList = [];
+
 class Coin {
   Coin({
     @required this.name,
@@ -28,5 +30,3 @@ class Coin {
     );
   }
 }
-
-List<Coin> coinList = [];
